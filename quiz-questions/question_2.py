@@ -29,7 +29,13 @@ def number_of_customers_per_state(customers):
     }
     """
     # Write your code here
-    pass
+    customer_count_by_state = {}
+    for key, value in customers:
+        if customer_count_by_state[key] not exists:
+            customer_count_by_state[key] = 0
+        for person in value:
+            customer_count_by_state[key] += 1
+     return customer_count_by_state
 
 
 class NumberOfCustomersPerStateTestCase(unittest.TestCase):
